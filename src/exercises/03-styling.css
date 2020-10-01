@@ -1,18 +1,22 @@
 .Box {
-    border: 1px solid #333;
+  border: 1px solid #333;
+  background-color: teal;
 }
 
 .Box--large {
-    width: 300px;
-    height: 300px;
+  width: 300px;
+  height: 300px;
+  background-color: purple;
 }
 
 .Box--medium {
-    width: 200px;
-    height: 200px;
+  width: 200px;
+  height: 200px;
+  background-color: brown;
 }
 
 .Box--small {
-    width: 100px;
-    height: 100px;
+  width: 100px;
+  height: 100px;
+  background-color: yellow;
 }

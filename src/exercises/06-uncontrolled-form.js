@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component } from "react";
 
 // Pretty much every application is going to need to do something with forms
 // There are two ways to handle forms elements with React.
@@ -20,9 +20,39 @@ import React, { Component } from 'react';
 // This component also needs to contain an onSubmit handler that when clicked alerts the value of an input of both input fields.
 // For extracting the values of the input fields, use React Refs.
 class CreateNoteForm extends Component {
-    render() {
-        return <div>Render a form here</div>;
-    }
+  constructor(props) {
+    super(props);
+    this.onSubmit = this.onSubmit.bind(this);
+    this.inputRef = React.createRef();
+    this.inputRef1 = React.createRef();
+  }
+
+  onSubmit = () => {
+    alert(
+      "Title:" +
+        this.inputRef.current.value +
+        ", content:" +
+        this.inputRef1.current.value
+    );
+  };
+
+  render() {
+    return (
+      <div>
+        <form onSubmit={this.onSubmit}>
+          <label>
+            Title:
+            <input type='text' ref={this.inputRef}></input>
+          </label>
+          <label>
+            Content:
+            <input type='text' ref={this.inputRef1}></input>
+          </label>
+          <button type='submit'>Submit</button>
+        </form>
+      </div>
+    );
+  }
 }
 
 export const Example = () => <CreateNoteForm />;
