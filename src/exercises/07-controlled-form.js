@@ -22,7 +22,7 @@ import React, { Component } from "react";
 //     - The content is empty - "Content is a mandatory field"
 //     - The title contains more than 10 characters - "Title cannot contain more than 10 characters"
 //   Since this is a EditNote functionality, we need to make sure to display the 'Default Title' and 'Default Content'
-//   when our component is rendered.
+//   when our component is rendered
 class EditNoteForm extends React.Component {
   constructor(props) {
     super(props);
