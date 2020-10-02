@@ -23,15 +23,15 @@ Box.propTypes = {
   children: PropTypes.node.isRequired,
 };
 
-export const Example = () => (
+export const Example = (props) => (
   <div>
-    <Box className='Box--small' size='small'>
+    <Box size='small' className={`Box--${props.size}`}>
       This is small box
     </Box>
-    <Box className='Box--medium' size='medium'>
+    <Box size='medium' className={`Box--${props.size}`}>
       This is medium box
     </Box>
-    <Box className='Box--large' size='large'>
+    <Box size='large' className={`Box--${props.size}`}>
       This is big box
     </Box>
   </div>

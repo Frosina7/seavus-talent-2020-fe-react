@@ -31,7 +31,7 @@ class EditNoteForm extends React.Component {
       title: this.props.defaultTitle,
       content: this.props.defaultContent,
       titleError: "",
-      contentError: " ",
+      contentError: "",
     };
   }
 
@@ -41,15 +41,15 @@ class EditNoteForm extends React.Component {
     if (value.length === 0) {
       this.setState({ titleError: "Title is a mandatory field" });
 
-      this.setState({ title: (this.state.title = value) });
+      this.setState({ title: value });
     } else if (value.length > 10) {
       this.setState({
         titleError: "Title cannot contain more than 10 characters",
       });
 
-      this.setState({ title: (this.state.title = value) });
+      this.setState({ title: value });
     } else {
-      this.setState({ title: (this.state.title = value) });
+      this.setState({ title: value });
 
       this.setState({ titleError: "" });
     }
@@ -61,9 +61,9 @@ class EditNoteForm extends React.Component {
     if (value.length === 0) {
       this.setState({ contentError: "Content is a mandatory field" });
 
-      this.setState({ content: (this.state.content = value) });
+      this.setState({ content: value });
     } else {
-      this.setState({ content: (this.state.content = value) });
+      this.setState({ content: value });
 
       this.setState({ contentError: "" });
     }
@@ -106,9 +106,7 @@ class EditNoteForm extends React.Component {
           <button
             type='submit'
             disabled={
-              this.state.title.length > 10 ||
-              this.state.title.length === 0 ||
-              this.state.content.length === 0
+              this.state.titleError !== "" || this.state.contentError !== ""
             }
             onClick={this.submitHandler}
           >

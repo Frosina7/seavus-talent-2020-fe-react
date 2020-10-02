@@ -23,16 +23,16 @@ class CreateNoteForm extends Component {
   constructor(props) {
     super(props);
     this.onSubmit = this.onSubmit.bind(this);
-    this.inputRef = React.createRef();
-    this.inputRef1 = React.createRef();
+    this.titleRef = React.createRef();
+    this.contentRef = React.createRef();
   }
 
   onSubmit = () => {
     alert(
       "Title:" +
-        this.inputRef.current.value +
+        this.titleRef.current.value +
         ", content:" +
-        this.inputRef1.current.value
+        this.contentRef.current.value
     );
   };
 
@@ -42,11 +42,11 @@ class CreateNoteForm extends Component {
         <form onSubmit={this.onSubmit}>
           <label>
             Title:
-            <input type='text' ref={this.inputRef}></input>
+            <input type='text' ref={this.titleRef}></input>
           </label>
           <label>
             Content:
-            <input type='text' ref={this.inputRef1}></input>
+            <input type='text' ref={this.contentRef}></input>
           </label>
           <button type='submit'>Submit</button>
         </form>
