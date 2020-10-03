@@ -25,14 +25,8 @@ Box.propTypes = {
 
 export const Example = (props) => (
   <div>
-    <Box size='small' className={`Box--${props.size}`}>
-      This is small box
-    </Box>
-    <Box size='medium' className={`Box--${props.size}`}>
-      This is medium box
-    </Box>
-    <Box size='large' className={`Box--${props.size}`}>
-      This is big box
-    </Box>
+    <Box size='small'>This is small box</Box>
+    <Box size='medium'>This is medium box</Box>
+    <Box size='large'>This is big box</Box>
   </div>
 );

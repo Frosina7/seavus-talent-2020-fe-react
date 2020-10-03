@@ -63,3 +63,5 @@ export const Example = () => (
     />
   </div>
 );
+
+export default Note;

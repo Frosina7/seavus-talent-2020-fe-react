@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React from "react";
 
 // For controlled components, the idea is that you push the values from the component
 // to the consumer via callback handlers. In the context of a form, this is normally
