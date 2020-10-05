@@ -18,14 +18,13 @@ import "./04-composition.css";
 export default class NotesGrid extends Component {
   state = {
     notes: [],
-    tags: [],
   };
 
   componentDidMount() {
     axios.get(`/api/notes`).then((res) => {
       console.log(res);
       this.setState({ notes: res.data });
-      this.setState({ tags: res.data });
+    
     });
   }
 
